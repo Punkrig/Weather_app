@@ -1,13 +1,18 @@
-*{
+/* Define estilos padrão para todos os elementos, removendo margens e preenchimentos e definindo uma fonte padrão */
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
-body{
+
+/* Define o plano de fundo do corpo do documento */
+body {
     background: #222;
 }
-.card{
+
+/* Define o estilo do cartão principal */
+.card {
     width: 20%;
     min-width: 470px;
     background: linear-gradient(135deg, #00feba, #5b548a);
@@ -17,13 +22,17 @@ body{
     padding: 40px 35px;
     text-align: center;
 }
-.search{
+
+/* Define o estilo do elemento de busca */
+.search {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.search input{
+
+/* Define o estilo da caixa de entrada de texto da busca */
+.search input {
     border: 0;
     outline: 0;
     background: #ebfffc;
@@ -35,7 +44,9 @@ body{
     margin-right: 16px;
     font-size: 18px;
 }
-.search button{
+
+/* Define o estilo do botão de busca */
+.search button {
     border: 0;
     outline: 0;
     background: #ebfffc;
@@ -45,40 +56,68 @@ body{
     cursor: pointer;
 }
 
-.search button img{
+/* Define o estilo da imagem dentro do botão de busca */
+.search button img {
     width: 16px;
 }
-.weather-icon{
+
+/* Define o estilo do ícone de clima */
+.weather-icon {
     width: 170px;
-    margin-top: 500;
+    margin-top: 50px; /* Corrigido valor de margin-top */
 }
-.weather h1{
+
+/* Define o estilo do título de temperatura */
+.weather h1 {
     font-size: 80px;
     font-weight: 500;
 }
-.weather h2{
+
+/* Define o estilo do título de cidade */
+.weather h2 {
     font-size: 45px;
     font-weight: 400;
     margin-top: -10px;
 }
 
-.details{
+/* Define o estilo dos detalhes de clima */
+.details {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
     margin-top: 50px;
 }
-.col{
+
+/* Define o estilo das colunas de detalhes de clima */
+.col {
     display: flex;
     align-items: center;
     text-align: left;
 }
-.col img{
+
+/* Define o estilo das imagens dentro das colunas */
+.col img {
     width: 40px;
     margin-right: 10px;
 }
-.humidity ,.wind{
+
+/* Define o estilo dos elementos de umidade e velocidade do vento */
+.humidity, .wind {
     font-size: 28px;
     margin-top: -6px;
+}
+
+/* Oculta o elemento de clima por padrão */
+.weather {
+    display: none;
+}
+
+/* Define o estilo da mensagem de erro */
+.error {
+    text-align: left;
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
 }

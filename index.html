@@ -1,35 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Configura a codificação e a viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define o título da página e importa o arquivo de estilo -->
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
-    <script src=""></script>
 </head>
 <body>
+    <!-- Define o contêiner principal do aplicativo de clima -->
     <div class="card">
+        <!-- Define a seção de busca -->
         <div class="search">
-            <input type="text" 
-            placeholder="Escreva o nome da cidade"
-            spellcheck="false"
-            >
-            <button><img src="images/search.png" alt="Foto de uma lupa"></button>
+            <!-- Input para inserir o nome da cidade com atributos de placeholder e desabilita a verificação ortográfica -->
+            <input type="text" placeholder="Escreva o nome da cidade" spellcheck="false" class="search-box">
+            <!-- Botão de busca com uma imagem de lupa -->
+            <button class="search-btn"><img src="images/search.png" alt="Foto de uma lupa"></button>
         </div>
-        <div class="weather">
-            <img src="images/rain.png" alt="Foto de uma nuvem chuvendo" class="weather-icon">
+        <!-- Div para exibir mensagem de erro, inicialmente oculta -->
+        <div class="error" style="display: none;">
+            <p>Nome de cidade inválido</p>
+        </div>
+        <!-- Div para exibir informações de clima, inicialmente oculta -->
+        <div class="weather" style="display: none;">
+            <!-- Ícone de clima -->
+            <img src="" alt="Foto de uma nuvem chuvendo" class="weather-icon">
+            <!-- Temperatura -->
             <h1 class="temp">22ºC</h1>
+            <!-- Nome da cidade -->
             <h2 class="city">New York</h2>
+            <!-- Detalhes do clima -->
             <div class="details">
+                <!-- Coluna de umidade -->
                 <div class="col">
-                    <img src="images/humidity.png" alt="foto de ondas" >
+                    <!-- Ícone de umidade -->
+                    <img src="images/humidity.png" alt="foto de ondas">
+                    <!-- Valor da umidade -->
                     <div>
                         <p class="humidity">50%</p>
                         <p>Humidity</p>
                     </div>
                 </div>
+                <!-- Coluna de velocidade do vento -->
                 <div class="col">
-                    <img src="images/wind.png" alt="representação visual do vendo" >
+                    <!-- Ícone de velocidade do vento -->
+                    <img src="images/wind.png" alt="representação visual do vendo">
+                    <!-- Valor da velocidade do vento -->
                     <div>
                         <p class="wind">15 km/h</p>
                         <p>Wind Speed</p>
@@ -38,5 +55,7 @@
             </div>
         </div>
     </div>
+    <!-- Importa o arquivo de script JavaScript -->
+    <script src="main.js"></script>
 </body>
 </html>
